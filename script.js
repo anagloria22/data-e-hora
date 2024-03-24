@@ -1,6 +1,7 @@
 function carregar() {
     var idh = window.document.getElementById('idh')
     var img = window.document.getElementById('img')
+    var txt = window.document.getElementById('txt')
     var data = new Date()
     var dia = data.getDay()
     var diaAtual = (new Date()).getDate();
@@ -78,14 +79,16 @@ function carregar() {
 
     idh.innerHTML = `Hoje é ${dia}, ${diaAtual} de ${mes} de ${ano} e a hora atual é ${hora} horas.`
     if (hora >= 0 && hora < 12) {
-        txt.innerHTML = `Bom dia`
-        img.src = 'imagens/manha.jpg'
-        document.body.style.background = '#D9D0C1'
+      txt.innerHTML = 'Bom dia'  
+      img.src = 'imagens/manha.jpg'
+      document.body.style.background = '#D9D0C1'
     } else if (hora >= 12 && hora < 18) {
-        img.src = 'imagens/tarde.jpg'
-        document.body.style.background = '#F2A30F'
+      txt.innerHTML = 'Boa tarde'  
+      img.src = 'imagens/tarde.jpg'
+      document.body.style.background = '#F2A30F'
     } else {
-        img.src = 'imagens/noite.jpg'
-        document.body.style.background = '#034AA6'
+      txt.innerHTML = 'Boa noite'
+      img.src = 'imagens/noite.jpg'
+      document.body.style.background = '#034AA6'
     }
 }
